@@ -7,11 +7,12 @@ const generateReadMe = (inquiry) =>
   ![badge](https://img.shields.io/badge/license-${inquiry.license}-blue)
 
 ## Description
+---
 ${inquiry.description}
 
+## Table of Contents
 ---
 
-## Table of Contents
 * [Technology](#technology)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -20,37 +21,34 @@ ${inquiry.description}
 * [Tests](#tests)
 * [Contact](#contact)
 
+## Technology
 ---
 
-## Technology
 ${inquiry.technology}
 
----
-
 ## Installation
+---
 ${inquiry.installation}
 
----
-
 ## Usage
+---
 ${inquiry.usage}
 
----
 
 ## License
+---
 ${inquiry.license}
 
----
 
 ## Contributing
+---
 ${inquiry.contribution}
 
----
 
 ## Tests
+---
 ${inquiry.tests}
 
----
 
 ## Contact
 Please contact me at ${inquiry.contact} with any questions or concerns regarding this or future projects.`;
@@ -93,8 +91,8 @@ inquirer
     },
     {
       type: "input",
-      name: "contributing",
-      message: "If you would like to contribute to a github project provide a link to your github page.  ex... @github/mbelfrom",
+      name: "contribution",
+      message: "If you would like to contribute to a github project provide a link to your github page.  ex... github/mbelfrom.com",
     },
     {
       type: "input",
