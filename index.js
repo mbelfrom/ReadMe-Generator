@@ -1,3 +1,9 @@
+const inquirer = require('inquirer');
+const fs = require('fs');
+
+const generateMdFile = (answers) =>
+
+
 inquirer
   .prompt([
     {
@@ -32,9 +38,9 @@ inquirer
     },
   ])
   .then((answers) => {
-    const htmlPageContent = generateHTML(answers);
+    const htmlPageContent = generateMdFile(answers);
 
-    fs.writeFile('index.html', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+    fs.writeFile('read.me', htmlPageContent, (err) =>
+      err ? console.log(err) : console.log('Congratulations, you have successfully generated a read me file!')
     );
   });
