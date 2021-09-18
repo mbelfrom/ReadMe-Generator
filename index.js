@@ -1,4 +1,4 @@
-
+console.clear()
 const inquirer = require("inquirer");
 const fs = require("fs");
 
@@ -12,7 +12,7 @@ ${inquiry.description}
 
 ## Table of Contents
 ---
-
+n
 * [Technology](#technology)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -51,7 +51,7 @@ ${inquiry.tests}
 
 
 ## Contact
-Please contact me at ${inquiry.contact} with any questions or concerns regarding this or future projects.`;
+Please contact me at ${inquiry.questions} or [Github](https://github.com/${inquiry.user}) with any questions or concerns regarding this or future projects.`;
 
 
 
@@ -92,7 +92,7 @@ inquirer
     {
       type: "input",
       name: "contribution",
-      message: "If you would like to contribute to a github project provide a link to your github page.  ex... github/mbelfrom.com",
+      message: "If you would like to contribute to a github project provide a contact information.",
     },
     {
       type: "input",
@@ -101,16 +101,22 @@ inquirer
     },
     {
       type: "input",
-      name: "contact",
+      name: "questions",
       message:
         "Please provide your email contact information on where you can be reached.",
     },
+    {
+      
+      type: "input",
+      name: "user",
+      message:
+        "Please provide your github user name on where you can be reached.",
+    }
   ])
   .then((questions) => {
     const ReadMeContent = generateReadMe(questions);
 
     fs.writeFile("readme.md", ReadMeContent, (err) =>
-    err ? console.log(err) : console.log("Success! Your README.md file has been generated!")
+    err ? console.log(err) : console.log(" Your README.md file has been generated!")
     );
   });
-
